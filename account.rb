@@ -18,8 +18,8 @@ class Account
     if @balance < amount
       "Can't complete transaction. Not enough funds"
     else
-      new_balance = @balance -= amount
-      account_statement(new_balance, amount)
+      @balance -= amount
+      account_statement(@balance, amount)
     end
   end
 
